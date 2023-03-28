@@ -32,7 +32,7 @@ export default async function Page({ params: { userId } }) {
       {/* This gets returned to the browser as a custom html string */}
       <h1>{user.name}</h1>
       <Suspense fallback={<div>Fetching todos...</div>}>
-        {/* The above gets rendered and then this gets streamed to the browser as a custom html string after */}
+        {/* The above gets rendered and then this gets streamed to the browser as a custom html string */}
         <TodoList listPromise={todosResponse}></TodoList>
       </Suspense>
     </>
