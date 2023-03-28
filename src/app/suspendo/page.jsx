@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import { TodoList } from '@/app/widgets/TodoList'
 
+// Faster request
 async function getUser() {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -9,6 +10,7 @@ async function getUser() {
   })
 }
 
+// Slower request
 async function getTodos() {
   return new Promise((resolve) => {
     setTimeout(() => {
