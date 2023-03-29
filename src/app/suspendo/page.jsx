@@ -14,15 +14,15 @@ async function getUser() {
 async function getTodos() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve([{ id: 1, name: 'Test Suspense', id: 2, name: 'Find something new to test' }])
+      resolve([{ id: 1, name: 'Test Suspense' }, { id: 2, name: 'Find something new to test' }])
     }, 4000)
   })
 }
 
-export default async function Page({ params: { userId } }) {
+export default async function Page() {
   // Initiate both requests in parallel.
-  const userResponse = getUser(userId)
-  const todosResponse = getTodos(userId)
+  const userResponse = getUser()
+  const todosResponse = getTodos()
 
   // Wait only for the user request
   const user = await userResponse

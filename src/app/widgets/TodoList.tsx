@@ -4,7 +4,10 @@ export async function TodoList ({ listPromise }: { listPromise: any }) {
 
   return (
     <div>
-      {JSON.stringify(data)}
+      <div>{data.length} items</div>
+      <div>
+        {JSON.stringify(data)}
+      </div>
     </div>
   )
 }
